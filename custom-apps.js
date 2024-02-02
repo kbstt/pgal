@@ -5,13 +5,13 @@ let apps = [
 ];   
 console.log(apps);
 //your list of apps goes above
-let currentSlug = window.location.pathname.split('/')[2] || ""; 
+let currentSlug = window.location.pathname.split("/")[2] || ""; 
 let currentApp = apps.find(o => o.slug === currentSlug) || apps[0];   
 let appId = currentApp.id;   
 console.log(appId);
-let script = document.createElement('script');   
+let script = document.createElement("script");   
 let scriptUrl = "https://progressier.app/"+appId+"/script.js";   
 console.log(scriptUrl);
-script.setAttribute('href', scriptUrl);   
+script.setAttribute("src", scriptUrl);   
 document.querySelector('body').appendChild(script);
 console.log(script);
